@@ -12,7 +12,7 @@ This repository contains the Static Site code for rendering CMS data held in you
 
 ## Table of contents
 
-- [Espi UI Kit](#espi-ui-kit)
+- [Boxdeluxe.io](#espi-ui-kit)
   - [Table of contents](#table-of-contents)
   - [Installation](#installation)
   - [Project Folder Structure](#project-folder-structure)
@@ -57,23 +57,28 @@ yarn run dev
 A quick look at the top-level files and directories you'll see in a Gatsby project.
 
     .
+    ├── .vscode
     ├── node_modules
     ├── src
     ├── .gitignore
+    ├── .nvmrc
+    ├── .stylelintrc.js
     ├── gatsby-browser.js
     ├── gatsby-config.js
     ├── gatsby-node.js
     ├── gatsby-ssr.js
     ├── LICENSE
-    ├── package-lock.json
     ├── package.json
     └── README.md
+    └── yarn.lock
 
-1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
 
-2.  **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. `src` is a convention for “source code”.
+1.  **`.vscode`**: Debugger Presets for vscode. They will appear as options in the debug dropdown in vscode.
 
-3.  **`.vscode`**: Debugger Presets for vscode. They will appear as options in the debug dropdown in vscode.
+2.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
+
+3.  **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. `src` is a convention for “source code”.
+
 
 4.  **`.gitignore`**: This file tells git which files it should not track / not maintain a version history for.
 
@@ -127,7 +132,7 @@ yarn test
 
 ## Environment Variables
 
-in order to return data from contentful we need to supply a `spaceId`and an `accessToken`. These values are available from your [Contentful Dashboard]][contentful].
+in order to return data from contentful we need to supply a `spaceId`and an `accessToken`. These values are available from your [Contentful Dashboard][contentful].
 
 These keys and their values can be added to a `contentful.json` file. They can also be exported to your shell environment which will overwrite the values stored in the `contentful.json`
 
