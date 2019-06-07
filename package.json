@@ -1,0 +1,65 @@
+{
+  "name": "boxdeluxe",
+  "private": true,
+  "description": "Boxdeluxe.io is the portfolio site of Lewis Nixon",
+  "version": "0.1.0",
+  "author": "Lewis Nixon",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.scss": [
+      "stylelint --fix",
+      "git add"
+    ]
+  },
+  "eslintConfig": {
+    "extends": "edenspiekermann"
+  },
+  "dependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-edenspiekermann": "^0.1.2",
+    "gatsby": "^2.8.4",
+    "gatsby-image": "^2.1.2",
+    "gatsby-plugin-manifest": "^2.1.1",
+    "gatsby-plugin-offline": "^2.1.1",
+    "gatsby-plugin-react-helmet": "^3.0.12",
+    "gatsby-plugin-sass": "^2.0.11",
+    "gatsby-plugin-sharp": "^2.1.3",
+    "gatsby-source-contentful": "^2.0.67",
+    "gatsby-source-filesystem": "^2.0.38",
+    "gatsby-transformer-sharp": "^2.1.21",
+    "husky": "^2.4.0",
+    "lint-staged": "^8.2.0",
+    "node-sass": "^4.12.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-helmet": "^5.2.1",
+    "stylelint": "^10.0.1",
+    "stylelint-config-sass-guidelines": "^6.0.0"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "serve": "gatsby serve",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+  },
+  "bugs": {
+    "url": "https://github.com/gatsbyjs/gatsby/issues"
+  }
+}

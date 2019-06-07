@@ -1,0 +1,9 @@
+@import '../constants/bd-map-colors.scss';
+/// return a color value from the color map.
+///
+/// @group Colors
+/// @parameter {string} $key - The key of the color you need.
+/// @requires $bd-map-colors
+@function bd-get-color($key) {
+  @return map-get($bd-map-colors, $key);
+}

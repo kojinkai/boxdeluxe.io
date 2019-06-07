@@ -1,0 +1,24 @@
+@import '../../scss/mixins';
+
+.container {
+  display: block;
+  background: #fab;
+}
+
+.link-container {
+  @include container;
+  display: flex;
+  justify-content: center;
+}
+
+.link-inner {
+  margin: 0 1rem;
+}
+
+.link {
+  background: #fab;
+}
+
+.link-title {
+  text-align: center;
+}

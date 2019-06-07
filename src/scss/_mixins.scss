@@ -1,0 +1,12 @@
+@import './functions/bd-get-color';
+@mixin container {
+  width: calc(100% - 10vmin);
+  margin: 0 auto;
+  padding: 5vmin 0;
+}
+@mixin section-headline($color: bd-get-color('primary'), $borderColor: bd-get-color('tertiary')) {
+  padding: 0 0 0.4em;
+  margin: 0 0 5vmin;
+  color: $color;
+  border-bottom: 1px solid $borderColor;
+}
