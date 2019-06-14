@@ -1,0 +1,12 @@
+@import '../functions/bd-get-font-family';
+@import '../functions/bd-get-font-size';
+
+$default-font-family: bd-get-font-family(serif);
+$default-font-size: bd-get-font-size(medium);
+$default-font-weight: 500;
+
+@mixin bd-font-style($family: $default-font-family, $size: $default-font-size, $weight: $default-font-weight) {
+  font-family: $family;
+  font-size: $size;
+  font-weight: $weight;
+}

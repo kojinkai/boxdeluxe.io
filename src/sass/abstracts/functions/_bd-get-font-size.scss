@@ -1,0 +1,14 @@
+@import '../constants/bd-map-font-sizes.scss';
+/// Extract a font-size value from the font-sizing map.
+///
+/// @requires $bd-map-font-sizes
+/// @parameter {string} $key - The key of the font-size you need. `regular`, `medium`, `xx-large` for example
+
+@function bd-get-font-size ($key) {
+  @if map-has-key($bd-map-font-sizes, $key) {
+    @return map-get($bd-map-font-sizes, $key);
+  } @else {
+    @error 'No matching font size found for `#{$key}` in font size map #{$map}';
+    @return null;
+  }
+}

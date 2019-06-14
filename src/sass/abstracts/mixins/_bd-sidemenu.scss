@@ -1,0 +1,22 @@
+@import './bd-media-queries';
+
+$menu-width: 300px;
+
+@mixin sidemenu-transition {
+  transform: translate(0, 0);
+  transition-duration: 200ms;
+  transition-timing-function: ease-in-out;
+  backface-visibility: hidden;
+}
+
+@mixin sidemenu-transition--open {
+  transition-timing-function: ease-in;
+  transform: translate(-$menu-width, 0);
+  /**  
+   * 1. Works with the sidemenu wrapper to allow the sidemenu links 
+   *    to be more easily accessible by mobile users with small screens
+   **/
+  @include media('<=small') {
+    transform: translate(-$menu-width + 80px, 0); /* 1. */
+  }
+}

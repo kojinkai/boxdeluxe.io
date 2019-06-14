@@ -23,6 +23,7 @@
     "extends": "edenspiekermann"
   },
   "dependencies": {
+    "clsx": "^1.0.4",
     "eslint": "^5.16.0",
     "eslint-config-edenspiekermann": "^0.1.2",
     "gatsby": "^2.8.4",

@@ -1,0 +1,12 @@
+@import './bd-font-style';
+@import '../functions/bd-get-font-family';
+@import '../functions/bd-get-font-size';
+
+$navigation-font-family: bd-get-font-family(sans);
+$navigation-font-size: bd-get-font-size(default);
+$navigation-font-weight: normal;
+
+@mixin bd-navigation-font-styles {
+  @include bd-font-style($navigation-font-family, $navigation-font-size, $navigation-font-weight);
+  text-decoration: none;
+}

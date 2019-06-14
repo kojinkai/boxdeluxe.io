@@ -1,0 +1,12 @@
+/// Main UI colors
+// ensure each color map has a color-description key - this isn't used it's just for organising this file for reference purposes
+$bd-map-colors: (
+  'base': (
+    'hex': #bada55,
+    'color-description': 'Base white'
+  ),
+  'baseDark': (
+    'hex': #000,
+    'color-description': 'Base black'
+  ),
+) !default;

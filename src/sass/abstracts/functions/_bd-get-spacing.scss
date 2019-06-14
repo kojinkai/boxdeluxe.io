@@ -1,0 +1,23 @@
+@import '../constants/bd-map-spacing.scss';
+/// Function to quickly get the spacing value from a centralised spacing map
+/// @group layout
+/// @parameter {string} $key [default] - Key of the wanted spacing size. For options, see $bd-map-spacing.
+/// @parameter {boolean} $negative [false] - inverts the spacing unit. Helpful for canceling out the gutters of elements inside a grid to keep the outer edges aligned.
+/// @parameter {map} $spacing-map [$bd-map-spacing] - A map of spacing key/value pairs to use.
+@function bd-get-spacing(
+  $key,
+  $negative: false,
+  $spacing-map: $bd-map-spacing
+) {
+  $factor: 1 !default;
+  @if $negative {
+    $factor: -1;
+  }
+
+  @if map-has-key($spacing-map, $key) {
+    @return map-get($spacing-map, $key) * $factor;
+  } @else {
+    @error 'No matching spacing key found for `#{$key}` in spacing map.';
+    @return null;
+  }
+}

@@ -1,0 +1,21 @@
+@import '../../sass/build.scss';
+@import '../../sass/abstracts/mixins/bd-sidemenu.scss';
+@import '../../sass/abstracts/mixins/bd-media-queries';
+
+.page-wrapper {
+  // the sidemenu has a transform which makes the smooth scroll on the homepage disappear
+  // because we do not need the sidemenu on desktop, we can remove it from here
+  @include media('<medium') {
+    @include sidemenu-transition;
+  }
+}
+
+.page-wrapper--sidemenu-is-active {
+  @include media('<medium') {
+    @include sidemenu-transition--open;
+  }
+}
+
+.container {
+  max-width: 100%;
+}

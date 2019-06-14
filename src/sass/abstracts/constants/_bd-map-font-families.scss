@@ -1,0 +1,8 @@
+$bd-font-stack-fallback: sans-serif;
+$bd-font-stack-serif: 'PT Serif', $bd-font-stack-fallback;
+$bd-font-stack-sans: 'Work Sans', $bd-font-stack-fallback;
+/// Font families
+$bd-map-font-families: (
+  'serif': $bd-font-stack-serif,
+  'sans': $bd-font-stack-sans,
+) !default;

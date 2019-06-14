@@ -1,0 +1,14 @@
+@import '../constants/bd-map-font-families.scss';
+/// Function to quickly get a font family from a central family map
+/// @group layout
+/// @parameter {string} $family Key of the wanted family. For example 'serif' or 'sans'.
+@function bd-get-font-family(
+  $family,
+) {
+  @if map-has-key($bd-map-font-families, $family) {
+    @return map-get($bd-map-font-families, $family);
+  } @else {
+    @error 'No matching font family found for `#{$family}` in font family map.';
+    @return null;
+  }
+}

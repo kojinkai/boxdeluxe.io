@@ -1,0 +1,6 @@
+// Standardised px-values for spacing (item gutters, paddings, margins, etc.)
+$bd-map-spacing: (
+'small-gutter': 10px,
+'standard-gutter': 20px,
+'large-gutter': 40px,
+) !default;

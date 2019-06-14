@@ -1,0 +1,30 @@
+@mixin visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  pointer-events: none;
+  position: absolute;
+  width: 1px;
+}
+
+@mixin clearfix {
+  
+  /*
+  * For IE 6/7 only
+  * Include this rule to trigger hasLayout and contain floats.
+  */
+  *zoom: 1;
+
+  &::before,
+  &::after {
+    content: ' ';
+    display: table;
+  }
+  
+  &::after {
+    clear: both;
+  }
+}

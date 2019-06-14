@@ -1,0 +1,16 @@
+@import '../constants/bd-grid.scss';
+@import '../functions/bd-get-spacing.scss';
+
+@mixin container {
+  max-width: $container;
+  margin: 0 auto;
+}
+
+@mixin standard-padding {
+  padding: bd-get-spacing(standard-gutter);
+}
+
+@mixin section {
+  @include container;
+  @include standard-padding;
+}

@@ -1,0 +1,79 @@
+@import '../../../sass/abstracts/functions/bd-get-color.scss';
+
+.hamburger {
+  font: inherit;
+  display: inline-block;
+  overflow: visible;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  transition-timing-function: linear;
+  transition-duration: 0.15s;
+  transition-property: opacity,filter;
+  text-transform: none;
+  color: inherit;
+  border: 0;
+  background-color: transparent;
+}
+
+.hamburger:focus {
+  outline: none;
+}
+
+.box {
+  position: relative;
+  display: inline-block;
+  width: 40px; /* 1. */
+  height: 10px;
+}
+
+.inner {
+  top: 50%;
+  display: block;
+  margin-top: -2px;
+}
+
+.is-active .inner {
+  transition-delay: 0.12s;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  transform: rotate(45deg);
+}
+
+.inner,
+.inner::before,
+.inner::after {
+  position: absolute;
+  left: 0;
+  width: 40px; /* 1. */
+  height: 4px; /* 1. */
+  transition-timing-function: ease;
+  transition-duration: 0.15s;
+  transition-property: transform;
+  border-radius: 4px;
+  background-color: bd-get-color(base);
+}
+
+.inner::before {
+  content: '';
+  top: -10px;
+  transition: top 75ms ease 0.12s,opacity 75ms ease;
+
+}
+
+.is-active .inner::before {
+  top: 0;
+  transition: top 75ms ease,opacity 75ms ease 0.12s;
+  opacity: 0;
+}
+
+.inner::after {
+  content: '';
+  bottom: -10px;
+  transition: bottom 75ms ease 0.12s,transform 75ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.is-active .inner::after {
+  bottom: 0;
+  transition: bottom 75ms ease,transform 75ms cubic-bezier(0.215, 0.61, 0.355, 1) 0.12s;
+  transform: rotate(-90deg);
+}

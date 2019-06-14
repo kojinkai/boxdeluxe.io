@@ -1,0 +1,22 @@
+@import '../abstracts/constants/bd-font-stack.scss';
+
+body {
+  font-family: $bd-font-stack-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+time,
+a,
+span,
+button,
+small,
+ul,
+ol {
+  font-family: $bd-font-stack-sans;
+}

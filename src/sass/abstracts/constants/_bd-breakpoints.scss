@@ -1,0 +1,7 @@
+/// Example values for breakpoints. Use these with include media: @include media('>medium') {...}
+$breakpoints: (
+  small: 576px,
+  medium: 768px,
+  large: 1024px,
+  xlarge: 1560px
+) !default;

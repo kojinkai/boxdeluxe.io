@@ -1,0 +1,46 @@
+@import '../../../sass/abstracts/mixins/bd-sidemenu.scss';
+@import '../../../sass/abstracts/functions/bd-get-spacing.scss';
+@import '../../../sass/abstracts/mixins/bd-media-queries';
+@import '../../../sass/abstracts/mixins/bd-navigation-font-styles.scss';
+
+.wrapper {
+  @include sidemenu-transition;
+  position: fixed;
+  top: 0;
+  left: auto;
+  right: -$menu-width;
+  width: $menu-width;
+  @include media('>=medium') {
+    display: none;
+  }
+  /**  
+   * 1. Slightly narrows the sidemenu on small screens 
+   *    so that users can access the hamburger menu easily
+   **/
+  @include media('<=small') {
+    /* 1. */
+    right: -$menu-width + 40px;
+    width: $menu-width - 40px;
+  }
+}
+
+.link {
+  text-decoration: none;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  list-style: none;
+}
+
+.list-item {
+  @include bd-navigation-font-styles;
+  padding: bd-get-spacing(standard-gutter);
+  margin: 0;
+}
+
+.wrapper--isActive {
+  @include sidemenu-transition--open;
+}

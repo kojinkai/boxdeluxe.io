@@ -1,0 +1,52 @@
+// @import '../../sass/abstracts/mixins/bd-scaffolding.scss';
+@import '../../sass/abstracts/functions/bd-get-spacing.scss';
+@import '../../sass/abstracts/mixins/bd-navigation-font-styles.scss';
+@import '../../sass/abstracts/mixins/bd-scaffolding';
+@import '../../sass/abstracts/mixins/bd-media-queries';
+
+@mixin main-header-link-styles {
+  @include bd-navigation-font-styles;
+  margin-left: bd-get-spacing(large-gutter);
+}
+
+.container {
+  @include section;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navigation {
+  display: flex;
+  padding: bd-get-spacing(small-gutter) 0;
+  justify-content: flex-end;
+}
+
+.internal-link {
+  @include main-header-link-styles;
+}
+
+/* 1. 
+* Value taken from the design via Zeplin 
+*  2.
+* Allows menu items to fit in one line on small screens
+*/
+.logo {
+  width: 100%;
+  max-width: 110px; /* 1. */
+  @include media('<=small') {
+    max-width: 75px; /* 2. */
+  }
+}
+
+@include media('<medium') {
+  .navigation {
+    display: none;
+  }
+}
+
+.small-viewport-call-to-action-group {
+  @include media('>=medium') {
+    display: none;
+  }
+}

@@ -1,11 +1,10 @@
+@import '../abstracts/constants/bd-grid.scss';
+@import '../abstracts/mixins/bd-media-queries.scss';
+
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-}
-
-body {
-  margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -224,7 +223,7 @@ textarea {
 }
 
 html {
-  font: 112.5%/1.45em georgia, serif;
+  font-size: 100%;
   box-sizing: border-box;
   overflow-y: scroll;
 }
@@ -243,7 +242,6 @@ html {
 
 body {
   color: hsla(0, 0%, 0%, 0.8);
-  font-family: georgia, serif;
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
@@ -251,6 +249,13 @@ body {
   -ms-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
   -webkit-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
   font-feature-settings: 'kern', 'liga', 'clig', 'calt';
+  margin: 0;
+}
+
+@include media('>=large') {
+  body {
+    padding-top: 80px;
+  }
 }
 
 img {
@@ -458,6 +463,10 @@ pre {
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
   margin-bottom: 1.45rem;
   font-size: 0.85rem;
   line-height: 1.42;
@@ -708,6 +717,7 @@ pre tt::before,
 pre tt::after {
   content: '';
 }
+
 @media only screen and (max-width: 480px) {
   html {
     font-size: 100%;
