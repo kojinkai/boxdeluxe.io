@@ -3,25 +3,47 @@
 @import '../../../sass/abstracts/mixins/bd-media-queries';
 @import '../../../sass/abstracts/mixins/bd-navigation-font-styles.scss';
 
+// @todo color map
+$darkgrey:   #9ca2ad;
+$menushadow: #2b3448;
+$navbg:      #3b414e;
+$menuitemborder: #5f636b;
+$white: #FFF;
 .wrapper {
-  @include sidemenu-transition;
-  position: fixed;
+  background: $darkgrey;  
+  bottom: 0;
+  overflow: scroll;
+  left: 0; 
+  position: absolute; 
+  right: 0;
   top: 0;
-  left: auto;
-  right: -$menu-width;
-  width: $menu-width;
-  @include media('>=medium') {
-    display: none;
+
+  &--is-active {
+    @include sidemenu-transition--open;
   }
-  /**  
-   * 1. Slightly narrows the sidemenu on small screens 
-   *    so that users can access the hamburger menu easily
-   **/
-  @include media('<=small') {
-    /* 1. */
-    right: -$menu-width + 40px;
-    width: $menu-width - 40px;
-  }
+}
+
+.nav {
+  background-color: $navbg;
+  bottom: 0;
+  left: 0; 
+  position: absolute; 
+  right: 0;
+  top: 0; 
+}
+
+.view {
+  bottom: 0;
+  box-shadow: -3px 0 9px 2px $menushadow;
+  overflow: scroll;
+  left: 0; 
+  overflow: scroll;
+  position: absolute; 
+  right: 0;
+  top: 0;
+  transition: transform .28s ease-out;
+  user-select: none;  
+  -webkit-overflow-scrolling: touch;    
 }
 
 .link {
@@ -39,8 +61,26 @@
   @include bd-navigation-font-styles;
   padding: bd-get-spacing(standard-gutter);
   margin: 0;
+  border-bottom: 1px solid $menuitemborder;
+  color: $white;
+  font-weight: 700;
+  line-height: 1.875rem;
+  margin-right: 20px;
+  padding: 20px 0 20px 60px;
+  position: relative;
+
+  &:first-child {
+    border-top: 0;
+  }
 }
 
-.wrapper--isActive {
-  @include sidemenu-transition--open;
+
+.sidemenu {
+  background: $darkgrey;  
+  bottom: 0;
+  overflow: scroll;
+  left: 0; 
+  position: absolute; 
+  right: 0;
+  top: 0;
 }
