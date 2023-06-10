@@ -25,7 +25,7 @@
   "dependencies": {
     "eslint": "^5.16.0",
     "eslint-config-edenspiekermann": "^0.1.2",
-    "gatsby": "^2.8.4",
+    "gatsby": "^4.25.7",
     "gatsby-image": "^2.1.2",
     "gatsby-plugin-manifest": "^2.1.1",
     "gatsby-plugin-offline": "^2.1.1",
