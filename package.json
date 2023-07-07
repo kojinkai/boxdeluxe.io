@@ -42,7 +42,7 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
-    "stylelint": "^10.0.1",
+    "stylelint": "^15.10.1",
     "stylelint-config-sass-guidelines": "^6.0.0"
   },
   "keywords": [
